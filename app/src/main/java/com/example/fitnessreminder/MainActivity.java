@@ -7,9 +7,7 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.CompoundButton;
 import android.widget.Switch;
 
 import java.util.Calendar;
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Switch workoutOnOff = findViewById(R.id.workoutOnOff);
 
 
-        /*if(vitaminsOnOff.isChecked()){
+        if(vitaminsOnOff.isChecked()){
 
             createNotificationChannel("vitaminsChannel", "Channel for vitamins", "notifyVitamins");
 
@@ -36,22 +34,15 @@ public class MainActivity extends AppCompatActivity {
 
                 AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
-                // Set the alarm to start at approximately 2:00 p.m.
+                // Set the alarm to start at approximately 9:00 a.m.
                 Calendar calendar = Calendar.getInstance();
                 calendar.setTimeInMillis(System.currentTimeMillis());
-                calendar.set(Calendar.HOUR_OF_DAY, 20);
-                calendar.set(Calendar.MINUTE, 47);
+                calendar.set(Calendar.HOUR_OF_DAY, 9);
 
-                // With setInexactRepeating(), you have to use one of the AlarmManager interval
-                // constants--in this case, AlarmManager.INTERVAL_DAY.
                 alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
                         AlarmManager.INTERVAL_DAY, pendingIntent);
 
-                Long t = System.currentTimeMillis();
-
-                alarmManager.set(AlarmManager.RTC_WAKEUP, t+5000, pendingIntent);
-
-        }*/
+        }
 
         if(waterOnOff.isChecked()){
 
@@ -63,21 +54,15 @@ public class MainActivity extends AppCompatActivity {
 
             AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
-           /* // Set the alarm to start at approximately 2:00 p.m.
+            // Set the alarm to start at approximately 3:00 p.m.
             Calendar calendar = Calendar.getInstance();
             calendar.setTimeInMillis(System.currentTimeMillis());
-            calendar.set(Calendar.HOUR_OF_DAY, 20);
-            calendar.set(Calendar.MINUTE, 47);
+            calendar.set(Calendar.HOUR_OF_DAY, 15);
 
             // With setInexactRepeating(), you have to use one of the AlarmManager interval
             // constants--in this case, AlarmManager.INTERVAL_DAY.
             alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
                     AlarmManager.INTERVAL_DAY, pendingIntent);
-                    */
-
-            Long t = System.currentTimeMillis();
-
-            alarmManager.set(AlarmManager.RTC_WAKEUP, t+20000, pendingIntent);
 
         }
 
@@ -91,21 +76,15 @@ public class MainActivity extends AppCompatActivity {
 
             AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
-            /* // Set the alarm to start at approximately 2:00 p.m.
+             // Set the alarm to start at approximately 10:00 a.m.
             Calendar calendar = Calendar.getInstance();
             calendar.setTimeInMillis(System.currentTimeMillis());
-            calendar.set(Calendar.HOUR_OF_DAY, 20);
-            calendar.set(Calendar.MINUTE, 47);
+            calendar.set(Calendar.HOUR_OF_DAY, 10);
 
             // With setInexactRepeating(), you have to use one of the AlarmManager interval
             // constants--in this case, AlarmManager.INTERVAL_DAY.
             alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
                     AlarmManager.INTERVAL_DAY, pendingIntent);
-                    */
-
-            Long t = System.currentTimeMillis();
-
-            alarmManager.set(AlarmManager.RTC_WAKEUP, t+5, pendingIntent);
 
         }
     }
